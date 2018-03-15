@@ -1,0 +1,27 @@
+" Display line numbers
+set number
+
+" Enable syntax highlighting
+syntax on
+
+" Use UTF-8
+set encoding=utf-8
+
+" SublimeText color cheme
+colorscheme afterglow
+
+" Highlight current line
+set cursorline
+
+" Automatically indent when adding a curly bracket, etc..
+set smartindent
+
+" Tabs are four columns wide. Each indentation level is one hard tab (no spaces)
+set shiftwidth=4
+set tabstop=4
+
+" Exit insert mode
+imap jk <esc>
+
+" Status line
+set laststatus=2

@@ -1,0 +1,3 @@
+[submodule "vim/pack/plugins/start/vim-afterglow"]
+	path = vim/pack/plugins/start/vim-afterglow
+	url = https://github.com/danilo-augusto/vim-afterglow
