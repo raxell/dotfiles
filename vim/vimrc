@@ -20,8 +20,9 @@ set smartindent
 set shiftwidth=4
 set tabstop=4
 
-" Exit insert mode
+" Back to normal mode
 imap jk <esc>
+vmap jk <esc>
 
 " Status line
 set laststatus=2
