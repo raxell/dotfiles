@@ -31,3 +31,8 @@ set laststatus=2
 " This also controls the update frequency of vim-gitgutter
 set updatetime=100
 
+" Open the new window below the current one for horizontal splits
+set splitbelow
+" Open the new window to the right of the current one for vertical splits
+set splitright
+
