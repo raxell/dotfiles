@@ -36,3 +36,6 @@ set splitbelow
 " Open the new window to the right of the current one for vertical splits
 set splitright
 
+" Open terminal window
+map <F12> <Esc>:term<CR><C-W>:res 15<CR>
+
