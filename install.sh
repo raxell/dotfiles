@@ -12,7 +12,7 @@ sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev \
 if [ ! -d ~/vim ]; then
 	git clone https://github.com/vim/vim.git
 	cd vim
-	./configure --with-features=huge
+	./configure --enable-clipboard --enable-xterm_clipboard --with-features=huge
 	make
 	sudo make install
 fi
