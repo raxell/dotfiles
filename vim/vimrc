@@ -39,3 +39,13 @@ set splitright
 " Open terminal window
 map <F12> <Esc>:term<CR><C-W>:res 15<CR>
 
+" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
