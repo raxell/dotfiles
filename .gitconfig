@@ -2,3 +2,6 @@
 	email = comes95@gmail.com
 	name = Marco Comes
 
+[core]
+	editor = vim
+
