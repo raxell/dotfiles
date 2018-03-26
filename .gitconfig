@@ -5,3 +5,13 @@
 [core]
 	editor = vim
 
+[alias]
+	a = add
+	b = branch
+	c = commit
+	d = diff
+	ds = diff --staged
+	h = log --all --graph --oneline --decorate
+	s = status
+	co = checkout
+
