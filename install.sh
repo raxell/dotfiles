@@ -25,3 +25,8 @@ if [ ! -L ~/.vim ] && [ ! -d ~/.vim ]; then
 	ln -s ~/dotfiles/vim ~/.vim
 fi
 
+# Setup Git
+if [ ! -L ~/.gitconfig ]; then
+	ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+fi
+
