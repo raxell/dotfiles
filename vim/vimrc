@@ -37,7 +37,7 @@ set splitbelow
 set splitright
 
 " Open terminal window
-map <F12> <Esc>:term<CR><C-W>:res 15<CR>
+map <F12> <Esc>:term ++rows=20<CR>
 
 " Disable arrow keys
 noremap <Up> <Nop>
