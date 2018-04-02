@@ -19,7 +19,8 @@ if [ ! -d $VIM_SOURCES ]; then
 	cd $VIM_SOURCES
 	./configure \
 		--prefix=$HOME \
-		--with-features=huge
+		--with-features=huge \
+		--disable-gui
 	make
 	make install
 fi
