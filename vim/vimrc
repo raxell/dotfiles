@@ -7,6 +7,9 @@ syntax on
 " Use UTF-8
 set encoding=utf-8
 
+" Show a few lines of context around the cursor when scrolling
+set scrolloff=5
+
 " SublimeText color cheme
 colorscheme afterglow
 
