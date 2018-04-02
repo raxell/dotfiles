@@ -12,12 +12,16 @@ sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev \
 sudo apt-get install editorconfig
 
 # Install Vim
-if [ ! -d ~/vim ]; then
-	git clone https://github.com/vim/vim.git
-	cd vim
-	./configure --with-features=huge
+VIM_SOURCES=~/vim_sources
+
+if [ ! -d $VIM_SOURCES ]; then
+	git clone https://github.com/vim/vim.git $VIM_SOURCES
+	cd $VIM_SOURCES
+	./configure \
+		--prefix=$HOME \
+		--with-features=huge
 	make
-	sudo make install
+	make install
 fi
 
 # Setup Vim
