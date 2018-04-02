@@ -15,7 +15,7 @@ sudo apt-get install editorconfig
 if [ ! -d ~/vim ]; then
 	git clone https://github.com/vim/vim.git
 	cd vim
-	./configure --enable-clipboard --enable-xterm_clipboard --with-features=huge
+	./configure --with-features=huge
 	make
 	sudo make install
 fi
