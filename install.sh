@@ -27,11 +27,11 @@ fi
 
 # Setup Vim
 if [ ! -L ~/.vimrc ]; then
-	ln -s ~/dotfiles/.vimrc ~/.vimrc
+	ln -s ~/dotfiles/vimrc ~/.vimrc
 fi
 
 # Setup Git
 if [ ! -L ~/.gitconfig ]; then
-	ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+	ln -s ~/dotfiles/gitconfig ~/.gitconfig
 fi
 
