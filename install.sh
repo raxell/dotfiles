@@ -26,8 +26,8 @@ if [ ! -d $VIM_SOURCES ]; then
 fi
 
 # Setup Vim
-if [ ! -L ~/.vim ] && [ ! -d ~/.vim ]; then
-	ln -s ~/dotfiles/vim ~/.vim
+if [ ! -L ~/.vimrc ]; then
+	ln -s ~/dotfiles/.vimrc ~/.vimrc
 fi
 
 # Setup Git
