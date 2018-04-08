@@ -36,6 +36,9 @@ set splitbelow
 " Open the new window to the right of the current one for vertical splits
 set splitright
 
+" Make preview window height half the size of the current window
+exec 'set previewheight=' . string(winheight(0)/2)
+
 " Install vim-plug automatically
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
