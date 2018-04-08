@@ -60,7 +60,7 @@ call plug#end()
 colorscheme afterglow
 
 " Open terminal window
-map <F12> <Esc>:exec 'term ++rows=' . string(&lines * 0.3)<CR>
+map <F12> <Esc>:exec 'term ++rows=' . string(&lines * 0.3)<CR><C-W>:set winfixheight<CR>
 
 " Send selection to fsharpi (assumes that fsharpi is running in a terminal
 " window located below the current one)
