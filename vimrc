@@ -56,6 +56,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'kongo2002/fsharp-vim'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
