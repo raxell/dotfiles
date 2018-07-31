@@ -58,6 +58,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kongo2002/fsharp-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
