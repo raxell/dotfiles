@@ -40,6 +40,7 @@ if [ ! -L ~/.vim/vimrc ]; then
 fi
 
 if [ ! -d ~/.vim/snippets ]; then
+	mkdir -p ~/.vim/snippets
 	ln -s ~/dotfiles/vim/snippets ~/.vim/snippets
 fi
 
