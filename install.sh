@@ -1,5 +1,7 @@
 cd ~
 
+sudo apt update
+
 # Remove Vim if already installed
 sudo apt remove vim vim-runtime gvim
 
