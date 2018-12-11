@@ -35,7 +35,9 @@ fi
 # Setup Vim
 mkdir -p ~/.vim
 
-ln -s ~/dotfiles/vim/vimrc ~/.vim/vimrc
+if [ ! -L ~/.vim/vimrc ]; then
+	ln -s ~/dotfiles/vim/vimrc ~/.vim/vimrc
+fi
 
 if [ ! -d ~/.vim/snippets ]; then
 	ln -s ~/dotfiles/vim/snippets ~/.vim/snippets
