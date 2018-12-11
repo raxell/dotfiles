@@ -33,6 +33,8 @@ if [ ! -d $VIM_SOURCES ]; then
 fi
 
 # Setup Vim
+mkdir -p ~/.vim
+
 ln -s ~/dotfiles/vim/vimrc ~/.vim/vimrc
 
 if [ ! -d ~/.vim/snippets ]; then
