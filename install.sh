@@ -7,6 +7,9 @@ sudo apt install build-essential
 # Install java
 sudo apt install default-jdk
 
+# Install curl
+sudo apt install curl
+
 # Remove Vim if already installed
 sudo apt remove vim vim-runtime gvim
 
