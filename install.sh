@@ -4,6 +4,9 @@ sudo apt update
 
 sudo apt install build-essential
 
+# Install java
+sudo apt install default-jdk
+
 # Remove Vim if already installed
 sudo apt remove vim vim-runtime gvim
 
