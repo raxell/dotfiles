@@ -2,6 +2,8 @@ cd ~
 
 sudo apt update
 
+sudo apt install build-essential
+
 # Remove Vim if already installed
 sudo apt remove vim vim-runtime gvim
 
