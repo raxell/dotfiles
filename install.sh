@@ -53,6 +53,7 @@ if [ ! -L ~/.gitconfig ]; then
 fi
 
 if [ ! -L ~/.bashrc ]; then
+	rm ~/.bashrc
 	ln -s ~/dotfiles/bashrc ~/.bashrc
 fi
 
