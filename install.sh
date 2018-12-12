@@ -69,6 +69,15 @@ if [ ! -d $REDIS_DIR ]; then
 	ln -s $REDIS_DIR/src/redis-cli ~/bin
 fi
 
+# Install dart
+if [ ! -d /usr/lib/dart ]; then
+	sudo apt install apt-transport-https
+	sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
+	sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
+	sudo apt update
+	sudo apt install dart
+fi
+
 if [ ! -L ~/.bashrc ]; then
 	rm ~/.bashrc
 	ln -s ~/dotfiles/bashrc ~/.bashrc
