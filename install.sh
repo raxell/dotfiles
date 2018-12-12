@@ -52,6 +52,20 @@ if [ ! -L ~/.gitconfig ]; then
 	ln -s ~/dotfiles/gitconfig ~/.gitconfig
 fi
 
+# Install redis
+REDIS_DIR=~/redis
+
+if [ ! -d $REDIS_DIR ]; then
+	wget http://download.redis.io/redis-stable.tar.gz
+	tar xzf redis-stable.tar.gz
+	rm redis-stable.tar.gz
+	mv redis-stable $REDIS_DIR
+	cd $REDIS_DIR
+	make
+	ln -s $REDIS_DIR/src/redis-server ~/bin
+	ln -s $REDIS_DIR/src/redis-cli ~/bin
+fi
+
 if [ ! -L ~/.bashrc ]; then
 	rm ~/.bashrc
 	ln -s ~/dotfiles/bashrc ~/.bashrc
