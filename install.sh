@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install build-essential
 
 # Install java
-sudo apt install default-jdk
+sudo apt install openjdk-8-jdk
 
 # Install curl
 sudo apt install curl
