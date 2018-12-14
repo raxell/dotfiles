@@ -25,3 +25,8 @@ imap jk <esc>
 
 " Status line
 set laststatus=2
+
+" Milliseconds of inactivity after which the swap file will be written to disk.
+" This also controls the update frequency of vim-gitgutter
+set updatetime=100
+
