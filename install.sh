@@ -28,6 +28,10 @@ fi
 # Setup Vim
 ln -s ~/dotfiles/vim/vimrc ~/.vim/vimrc
 
+if [ ! -d ~/.vim/snippets ]; then
+	ln -s ~/dotfiles/vim/snippets ~/.vim/snippets
+fi
+
 # Setup Git
 if [ ! -L ~/.gitconfig ]; then
 	ln -s ~/dotfiles/gitconfig ~/.gitconfig

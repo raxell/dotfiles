@@ -60,6 +60,14 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 
+" Snippet plugin with dependencies
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
+let g:snipMate = {}
+let g:snipMate.snippet_version = 1
+
 call plug#end()
 
 " SublimeText color scheme
