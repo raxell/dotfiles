@@ -16,9 +16,11 @@ set cursorline
 " Automatically indent when adding a curly bracket, etc..
 set smartindent
 
-" Tabs are four columns wide. Each indentation level is one hard tab (no spaces)
-set shiftwidth=4
-set tabstop=4
+" Tabs are 4 columns wide. Each indentation level is 4 spaces
+set tabstop=4      " number of visual spaces per TAB
+set softtabstop=4  " number of spaces inserted when hitting TAB
+set shiftwidth=4   " number of spaces per (auto)indent (>>, <<, etc..)
+set expandtab      " turns TAB into spaces
 
 " Back to normal mode
 imap jk <esc>
