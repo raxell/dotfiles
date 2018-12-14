@@ -13,6 +13,9 @@ set scrolloff=5
 " Highlight current line
 set cursorline
 
+" Visual autocomplete for command menu
+set wildmenu
+
 " Automatically indent when adding a curly bracket, etc..
 set smartindent
 
