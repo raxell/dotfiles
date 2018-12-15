@@ -83,3 +83,10 @@ if [ ! -L ~/.bashrc ]; then
 	ln -s ~/dotfiles/bashrc ~/.bashrc
 fi
 
+# Add man page for z script
+if [ ! -L /usr/local/man/man1/z.1 ]; then
+    sudo mkdir -p /usr/local/man/man1
+    sudo ln -s ~/dotfiles/z/z.1 /usr/local/man/man1/z.1
+    sudo mandb
+fi
+
