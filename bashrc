@@ -26,9 +26,11 @@ export TERM=xterm-256color
 function set_bash_prompt() {
     local BOLD_GREEN='\[\033[01;32m\]'
     local BOLD_BLUE='\[\033[01;34m\]'
+    local BOLD_RED='\[\033[01;31m\]'
     local DEFAULT_TEXT='\[\033[00m\]'
+    local GIT_BRANCH='$(git branch --format="%(HEAD) (%(refname:short))" 2> /dev/null | grep \* | cut -d"*" -f2)'
 
-    echo "$BOLD_GREEN\u@\h$DEFAULT_TEXT $BOLD_BLUE\w$DEFAULT_TEXT\$ "
+    echo "$BOLD_GREEN\u@\h$DEFAULT_TEXT $BOLD_BLUE\w$BOLD_RED$GIT_BRANCH$DEFAULT_TEXT\$ "
 }
 
 PS1=$(set_bash_prompt)
