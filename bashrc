@@ -23,7 +23,10 @@ shopt -s checkwinsize
 export TERM=xterm-256color
 
 # Prompt
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+BOLD_GREEN='\[\033[01;32m\]'
+BOLD_BLUE='\[\033[01;34m\]'
+DEFAULT_TEXT='\[\033[00m\]'
+PS1="$BOLD_GREEN\u@\h$DEFAULT_TEXT:$BOLD_BLUE\w$DEFAULT_TEXT\$ "
 
 # Enable colors to distinguish file types
 alias ls='ls --color=auto'
