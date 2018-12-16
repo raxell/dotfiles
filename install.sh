@@ -41,19 +41,13 @@ fi
 # Setup Vim
 mkdir -p ~/.vim
 
-if [ ! -L ~/.vim/vimrc ]; then
-	ln -s ~/dotfiles/vim/vimrc ~/.vim/vimrc
-fi
+ln -sf ~/dotfiles/vim/vimrc ~/.vim/vimrc
 
-if [ ! -d ~/.vim/snippets ]; then
-	mkdir -p ~/.vim/snippets
-	ln -s ~/dotfiles/vim/snippets ~/.vim/snippets
-fi
+mkdir -p ~/.vim/snippets
+ln -sf ~/dotfiles/vim/snippets ~/.vim/snippets
 
 # Setup Git
-if [ ! -L ~/.gitconfig ]; then
-	ln -s ~/dotfiles/gitconfig ~/.gitconfig
-fi
+ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 
 # Install redis
 REDIS_DIR=~/redis
@@ -78,15 +72,10 @@ if [ ! -d /usr/lib/dart ]; then
 	sudo apt install dart
 fi
 
-if [ ! -L ~/.bashrc ]; then
-	rm ~/.bashrc
-	ln -s ~/dotfiles/bashrc ~/.bashrc
-fi
+ln -sf ~/dotfiles/bashrc ~/.bashrc
 
 # Add man page for z script
-if [ ! -L /usr/local/man/man1/z.1 ]; then
-    sudo mkdir -p /usr/local/man/man1
-    sudo ln -s ~/dotfiles/z/z.1 /usr/local/man/man1/z.1
-    sudo mandb
-fi
+sudo mkdir -p /usr/local/man/man1
+sudo ln -sf ~/dotfiles/z/z.1 /usr/local/man/man1/z.1
+sudo mandb
 
