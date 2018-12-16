@@ -1,3 +1,11 @@
+ME='marco'
+if [ $USER != $ME ] || [ $(echo $HOME | rev | cut -d'/' -f1 | rev) != $ME ]; then
+    echo "Cannot setup environment: I'm probably in someone's else environment"
+    echo "USER=$USER"
+    echo "HOME=$HOME"
+    exit
+fi
+
 cd ~
 
 # Load terminal theme file
