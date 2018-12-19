@@ -64,6 +64,7 @@ Plug 'kongo2002/fsharp-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dart-lang/dart-vim-plugin'
 
 " Snippet plugin with dependencies
 Plug 'marcweber/vim-addon-mw-utils'
