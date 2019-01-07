@@ -74,6 +74,10 @@ Plug 'garbas/vim-snipmate'
 Plug 'w0rp/ale'
 Plug 'natebosch/vim-lsc'
 
+let g:lsc_server_commands = {'dart': 'dart_language_server'}
+" Automatically close the documentation window
+autocmd CompleteDone * silent! pclose
+
 let g:snipMate = {}
 let g:snipMate.snippet_version = 1
 

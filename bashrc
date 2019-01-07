@@ -49,4 +49,5 @@ export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH=$HOME/bin:$PATH:/usr/lib/dart/bin:/usr/lib/dart/bin
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 

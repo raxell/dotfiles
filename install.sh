@@ -80,6 +80,9 @@ if [ ! -d /usr/lib/dart ]; then
 	sudo apt install dart
 fi
 
+# Add global dart packages
+pub global activate dart_language_server
+
 ln -sf "$HOME/dotfiles/bashrc" "$HOME/.bashrc"
 
 # Add man page for z script
