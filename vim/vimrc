@@ -72,6 +72,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 
 Plug 'w0rp/ale'
+Plug 'natebosch/vim-lsc'
 
 let g:snipMate = {}
 let g:snipMate.snippet_version = 1
