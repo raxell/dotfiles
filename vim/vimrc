@@ -65,6 +65,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'lervag/vimtex'
 
 " Snippet plugin with dependencies
 Plug 'marcweber/vim-addon-mw-utils'
