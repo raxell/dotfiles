@@ -21,6 +21,10 @@ sudo apt install openjdk-8-jdk
 # Install curl
 sudo apt install curl
 
+# Install LaTex
+sudo apt install texlive
+sudo apt install latexmk
+
 # Remove Vim if already installed
 sudo apt remove vim vim-runtime gvim
 
