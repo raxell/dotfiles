@@ -1,3 +1,6 @@
+# Load util files
+source "src/flag.sh"
+
 ME='marco'
 if [ $USER != $ME ] || [ $(echo $HOME | rev | cut -d'/' -f1 | rev) != $ME ]; then
     echo "Cannot setup environment: I'm probably in someone's else environment"
@@ -9,7 +12,13 @@ fi
 cd $HOME
 
 # Load terminal theme file
-dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < "$HOME/dotfiles/terminal-theme.dconf"
+FLAG_TERMINAL_THEME="terminal-theme"
+
+if [ $(flag_is_set $FLAG_TERMINAL_THEME) == false ]; then
+    dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < "$HOME/dotfiles/terminal-theme.dconf"
+    flag_set $FLAG_TERMINAL_THEME
+fi
+
 
 sudo apt update
 
