@@ -46,7 +46,7 @@ alias egrep='egrep --color=auto'
 alias q='exit'
 
 export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+source "$NVM_DIR/nvm.sh"
 
 export PATH=$HOME/bin:$PATH:/usr/lib/dart/bin:/usr/lib/dart/bin
 export PATH="$PATH":"$HOME/.pub-cache/bin"

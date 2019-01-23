@@ -95,6 +95,29 @@ fi
 # Add global dart packages
 pub global activate dart_language_server
 
+# Install nvm: Node Version Manager
+NVM_DIR="$HOME/.nvm"
+
+function upgrade_nvm {
+    cd $NVM_DIR
+    git fetch --tags origin
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+    source "$NVM_DIR/nvm.sh"
+}
+
+function install_nvm {
+   if [ -d $NVM_DIR ]; then
+        echo "nvm already installed in $NVM_DIR"
+        exit
+   fi
+
+   git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+   upgrade_nvm
+}
+
+install_nvm
+
+
 ln -sf "$HOME/dotfiles/bashrc" "$HOME/.bashrc"
 
 # Add man page for z script
