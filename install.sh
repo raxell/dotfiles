@@ -63,8 +63,7 @@ mkdir -p "$HOME/.vim"
 
 ln -sf "$HOME/dotfiles/vim/vimrc" "$HOME/.vim/vimrc"
 
-mkdir -p "$HOME/.vim/snippets"
-ln -sf "$HOME/dotfiles/vim/snippets" "$HOME/.vim/snippets"
+ln -sTf "$HOME/dotfiles/vim/snippets" "$HOME/.vim/snippets"
 
 # Setup Git
 ln -sf "$HOME/dotfiles/gitconfig" "$HOME/.gitconfig"
