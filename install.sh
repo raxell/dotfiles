@@ -33,6 +33,8 @@ sudo apt install curl
 # Install LaTex
 sudo apt install texlive latexmk texlive-lang-italian
 
+sudo apt install postgresql
+
 # Remove Vim if already installed
 sudo apt remove vim vim-runtime gvim
 
