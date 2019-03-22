@@ -118,6 +118,9 @@ function install_nvm {
 
 install_nvm
 
+# Install Sass
+npm install -g sass
+
 
 ln -sf "$HOME/dotfiles/bashrc" "$HOME/.bashrc"
 
