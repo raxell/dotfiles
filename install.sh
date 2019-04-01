@@ -35,37 +35,43 @@ sudo apt install texlive latexmk texlive-lang-italian
 
 sudo apt install postgresql
 
-# Remove Vim if already installed
-sudo apt remove vim vim-runtime gvim
-
-# Install Vim dependencies
-sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev \
-	libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
-	libcairo2-dev libx11-dev libxpm-dev libxt-dev
-
-# Install editorconfig-vim dependencies
-sudo apt-get install editorconfig
-
 # Install Vim
-VIM_SOURCES="/tmp/vim_sources"
+function upgrade_vim {
+    local VIM_SOURCES="/tmp/vim_sources"
 
-if [ ! -d $VIM_SOURCES ]; then
-	git clone https://github.com/vim/vim.git $VIM_SOURCES
-	cd $VIM_SOURCES
-	./configure \
-		--prefix=$HOME \
-		--with-features=huge \
-		--disable-gui
-	make
-	make install
-fi
+    if [ ! -d $VIM_SOURCES ]; then
+        git clone https://github.com/vim/vim.git $VIM_SOURCES
+        cd $VIM_SOURCES
+        ./configure \
+            --prefix=$HOME \
+            --with-features=huge \
+            --disable-gui
+        make
+        make install
+    fi
+}
 
-# Setup Vim
-mkdir -p "$HOME/.vim"
+function install_vim {
+    # Remove Vim if already installed
+    sudo apt remove vim vim-runtime gvim
 
-ln -sf "$HOME/dotfiles/vim/vimrc" "$HOME/.vim/vimrc"
+    # Install Vim dependencies
+    sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev \
+        libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
+        libcairo2-dev libx11-dev libxpm-dev libxt-dev
 
-ln -sTf "$HOME/dotfiles/vim/snippets" "$HOME/.vim/snippets"
+    # Install editorconfig-vim dependency
+    sudo apt-get install editorconfig
+
+    upgrade_vim
+
+    # Setup Vim
+    mkdir -p "$HOME/.vim"
+
+    ln -sf "$HOME/dotfiles/vim/vimrc" "$HOME/.vim/vimrc"
+
+    ln -sTf "$HOME/dotfiles/vim/snippets" "$HOME/.vim/snippets"
+}
 
 # Setup Git
 ln -sf "$HOME/dotfiles/gitconfig" "$HOME/.gitconfig"
