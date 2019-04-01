@@ -47,7 +47,7 @@ sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev \
 sudo apt-get install editorconfig
 
 # Install Vim
-VIM_SOURCES="$HOME/vim_sources"
+VIM_SOURCES="/tmp/vim_sources"
 
 if [ ! -d $VIM_SOURCES ]; then
 	git clone https://github.com/vim/vim.git $VIM_SOURCES
