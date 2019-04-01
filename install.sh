@@ -77,18 +77,23 @@ function install_vim {
 ln -sf "$HOME/dotfiles/gitconfig" "$HOME/.gitconfig"
 
 # Install redis
-REDIS_DIR="$HOME/redis"
+function upgrade_redis {
+    local REDIS_DIR="$HOME/redis"
 
-if [ ! -d $REDIS_DIR ]; then
 	wget http://download.redis.io/redis-stable.tar.gz
 	tar xzf redis-stable.tar.gz
 	rm redis-stable.tar.gz
 	mv redis-stable $REDIS_DIR
 	cd $REDIS_DIR
 	make
-	ln -s $REDIS_DIR/src/redis-server "$HOME/bin"
-	ln -s $REDIS_DIR/src/redis-cli "$HOME/bin"
-fi
+	mv $REDIS_DIR/src/redis-server "$HOME/bin"
+	mv $REDIS_DIR/src/redis-cli "$HOME/bin"
+    rm -rf $REDIS_DIR
+}
+
+function install_redis {
+    upgrade_redis
+}
 
 # Install dart
 if [ ! -d /usr/lib/dart ]; then
