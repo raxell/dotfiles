@@ -121,6 +121,8 @@ install_nvm
 # Install Sass
 npm install -g sass
 
+git clone https://github.com/raxell/sass-util.git "$HOME/code/util/sass"
+
 
 ln -sf "$HOME/dotfiles/bashrc" "$HOME/.bashrc"
 
