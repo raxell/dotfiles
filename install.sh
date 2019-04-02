@@ -134,6 +134,8 @@ npm install -g sass
 
 git clone https://github.com/raxell/sass-util.git "$HOME/code/util/sass"
 
+# Setup codedraft
+git clone https://github.com/raxell/codedraft.git "$HOME/code/codedraft"
 
 ln -sf "$HOME/dotfiles/bashrc" "$HOME/.bashrc"
 

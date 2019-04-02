@@ -44,6 +44,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias q='exit'
+alias dr="$HOME/code/codedraft/bin/draft.sh"
 
 export NVM_DIR=$HOME/.nvm
 source "$NVM_DIR/nvm.sh"
