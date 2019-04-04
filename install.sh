@@ -131,6 +131,8 @@ install_nvm
 
 # Install Sass
 npm install -g sass
+# Install Pug
+npm install -g pug-cli
 
 git clone https://github.com/raxell/sass-util.git "$HOME/code/util/sass"
 
