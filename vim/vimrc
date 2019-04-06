@@ -119,5 +119,12 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Toggle relative line numbers
 nnoremap <leader>n :set relativenumber!<CR>
 
+" Switch between relative and absolute line numbers automatically
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+augroup END
+
 " Fast change buffer
 nnoremap <leader>b :ls<cr>:b<space>
