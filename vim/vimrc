@@ -119,3 +119,5 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Toggle relative line numbers
 nnoremap <leader>n :set relativenumber!<CR>
 
+" Fast change buffer
+nnoremap <leader>b :ls<cr>:b<space>
