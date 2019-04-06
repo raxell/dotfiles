@@ -1,3 +1,6 @@
+" Set the leader key
+let mapleader = "-"
+
 " Display line numbers
 set number
 
