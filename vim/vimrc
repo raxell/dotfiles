@@ -39,6 +39,10 @@ set laststatus=2
 " This also controls the update frequency of vim-gitgutter
 set updatetime=100
 
+" Auto reload a file as soon as it changes on disk
+set autoread
+au CursorHold * checktime
+
 " Open the new window below the current one for horizontal splits
 set splitbelow
 " Open the new window to the right of the current one for vertical splits
