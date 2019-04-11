@@ -132,3 +132,11 @@ augroup END
 
 " Fast change buffer
 nnoremap <leader>b :ls<cr>:b<space>
+
+" Change linter highlight colors and symbols
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '•'
+highlight ALEErrorSign ctermbg=none ctermfg=088
+highlight ALEWarningSign ctermbg=none ctermfg=031
+highlight ALEError ctermbg=088
+highlight ALEWarning ctermbg=031
