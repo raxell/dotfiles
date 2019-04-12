@@ -75,6 +75,7 @@ function install_vim {
 
 # Setup Git
 ln -sf "$HOME/dotfiles/gitconfig" "$HOME/.gitconfig"
+ln -sf "$HOME/dotfiles/gitignore" "$HOME/.gitignore"
 
 # Install redis
 function upgrade_redis {
