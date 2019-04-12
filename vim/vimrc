@@ -85,7 +85,10 @@ Plug 'natebosch/vim-lsc'
 
 call plug#end()
 
-let g:lsc_server_commands = {'dart': 'dart_language_server'}
+" Map a filetype to the command that starts the language server for that filetype
+let g:lsc_server_commands = {
+\ 'dart': 'dart_language_server',
+\}
 
 let g:ale_fixers = {
 \ 'dart': ['dartfmt'],
