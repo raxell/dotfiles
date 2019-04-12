@@ -85,6 +85,9 @@ Plug 'natebosch/vim-lsc'
 
 call plug#end()
 
+" Enable default mappings for LSP commands
+let g:lsc_auto_map = v:true
+
 " Map a filetype to the command that starts the language server for that filetype
 let g:lsc_server_commands = {
 \ 'dart': 'dart_language_server',
