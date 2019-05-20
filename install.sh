@@ -96,6 +96,9 @@ function install_redis {
     upgrade_redis
 }
 
+# Install Rust
+curl https://sh.rustup.rs -sSf | sh
+
 # Install dart
 if [ ! -d /usr/lib/dart ]; then
 	sudo apt install apt-transport-https

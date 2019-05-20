@@ -51,6 +51,6 @@ source "$NVM_DIR/nvm.sh"
 
 export PATH=$HOME/bin:$PATH:/usr/lib/dart/bin:/usr/lib/dart/bin
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH":"$HOME/.cargo/bin"
 
 export SASS_PATH="$HOME/code/util/sass"
-
