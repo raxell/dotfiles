@@ -75,6 +75,7 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'lervag/vimtex'
 Plug 'digitaltoad/vim-pug'
 Plug 'tpope/vim-obsession'
+Plug 'posva/vim-vue'
 
 " Snippet plugin with dependencies
 Plug 'marcweber/vim-addon-mw-utils'
