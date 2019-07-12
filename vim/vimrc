@@ -62,20 +62,20 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'danilo-augusto/vim-afterglow'
+
+" Collection of language plugins
+Plug 'sheerun/vim-polyglot'
+
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'kongo2002/fsharp-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
-Plug 'dart-lang/dart-vim-plugin'
 Plug 'lervag/vimtex'
-Plug 'digitaltoad/vim-pug'
 Plug 'tpope/vim-obsession'
-Plug 'posva/vim-vue'
 
 " Snippet plugin with dependencies
 Plug 'marcweber/vim-addon-mw-utils'
