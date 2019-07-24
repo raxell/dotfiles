@@ -98,6 +98,7 @@ let g:lsc_server_commands = {
 
 let g:ale_fixers = {
 \ 'dart': ['dartfmt'],
+\ 'javascript': ['eslint'],
 \}
 let g:ale_fix_on_save = 1
 
