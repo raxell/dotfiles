@@ -96,9 +96,20 @@ let g:lsc_server_commands = {
 \ 'rust': 'rls',
 \}
 
+" Allow javascript linters on html files
+let g:ale_linter_aliases = {
+\   'html': ['javascript']
+\}
+
+" Enable eslint on html files
+let g:ale_linters = {
+\   'html': ['eslint'],
+\}
+
 let g:ale_fixers = {
 \ 'dart': ['dartfmt'],
 \ 'javascript': ['eslint'],
+\ 'html': ['eslint'],
 \}
 let g:ale_fix_on_save = 1
 
