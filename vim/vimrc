@@ -87,6 +87,9 @@ Plug 'natebosch/vim-lsc'
 
 call plug#end()
 
+" Treat riot files as regular html files to get syntax highlighting and linting
+autocmd BufRead,BufNewFile *.riot set filetype=html
+
 " Enable default mappings for LSP commands
 let g:lsc_auto_map = v:true
 
