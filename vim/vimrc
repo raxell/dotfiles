@@ -97,6 +97,7 @@ let g:lsc_auto_map = v:true
 let g:lsc_server_commands = {
 \ 'dart': 'dart_language_server',
 \ 'rust': 'rls',
+\ 'typescript': 'javascript-typescript-stdio',
 \}
 
 " Allow javascript linters on html files
