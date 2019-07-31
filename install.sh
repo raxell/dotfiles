@@ -133,10 +133,13 @@ function install_nvm {
 
 install_nvm
 
-# Install Sass
-npm install -g sass
-# Install Pug
-npm install -g pug-cli
+# Install global modules
+npm install -g \
+    sass \
+    pug-cli \
+    typescript \
+    @riotjs/cli \
+    javascript-typescript-langserver \
 
 git clone https://github.com/raxell/sass-util.git "$HOME/code/util/sass"
 
