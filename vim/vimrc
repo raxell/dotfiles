@@ -58,23 +58,44 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Plugins
+" =============================================================================
+" PLUGINS
+" =============================================================================
+
 call plug#begin('~/.vim/plugged')
 
+" SublimeText like colorscheme
 Plug 'danilo-augusto/vim-afterglow'
 
 " Collection of language plugins
 Plug 'sheerun/vim-polyglot'
 
+" Support for .editorconfig files
 Plug 'editorconfig/editorconfig-vim'
+
+" Show a statusline at the bottom of each window
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Git wrapper commands
 Plug 'tpope/vim-fugitive'
+
+" Show which lines have been added, modified, or removed from the last commit
 Plug 'airblade/vim-gitgutter'
+
+" Comment/uncomment lines
 Plug 'tpope/vim-commentary'
+
+" Surround text with quotes, parenthesis, etc..
 Plug 'tpope/vim-surround'
+
+" Insert/delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
+
+" Latex utils
 Plug 'lervag/vimtex'
+
+" Save and keep updated the current working session for subsequent starts
 Plug 'tpope/vim-obsession'
 
 " Snippet plugin with dependencies
@@ -82,10 +103,14 @@ Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 
+" Linting engine
 Plug 'w0rp/ale'
+
+" Comunication with a language server (allow go to definition, renaming, etc..)
 Plug 'natebosch/vim-lsc'
 
 call plug#end()
+
 
 " Treat riot files as regular html files to get syntax highlighting and linting
 autocmd BufRead,BufNewFile *.riot set filetype=html
