@@ -35,7 +35,7 @@ function set_bash_prompt() {
 
 PS1=$(set_bash_prompt)
 
-# Enable colors to distinguish file types
+# Enable colorized output
 if ls --color -d . &> /dev/null; then
   alias ls="ls --color=auto"
 elif ls -G -d . &> /dev/null; then
