@@ -47,8 +47,12 @@ alias grep='grep --color=auto'
 alias q='exit'
 alias dr="$HOME/code/codedraft/bin/draft.sh"
 
+# nvm script
 export NVM_DIR=$HOME/.nvm
-source "$NVM_DIR/nvm.sh"
+
+if [ -d $NVM_DIR ]; then
+    source "$NVM_DIR/nvm.sh"
+fi
 
 export PATH=$HOME/bin:$PATH:/usr/lib/dart/bin:/usr/lib/dart/bin
 export PATH="$PATH":"$HOME/.pub-cache/bin"
