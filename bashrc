@@ -37,11 +37,7 @@ PS1=$(set_bash_prompt)
 
 # Enable colors to distinguish file types
 alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 
 alias q='exit'
 alias dr="$HOME/code/codedraft/bin/draft.sh"
