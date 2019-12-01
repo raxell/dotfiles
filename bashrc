@@ -44,6 +44,9 @@ fi
 
 alias grep='grep --color=auto'
 
+export TODOTXT_DEFAULT_ACTION=ls
+alias t='todo.sh'
+
 alias q='exit'
 alias dr="$HOME/code/codedraft/bin/draft.sh"
 
