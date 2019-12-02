@@ -153,3 +153,7 @@ sudo mkdir -p /usr/local/man/man1
 sudo ln -sf "$HOME/dotfiles/z/z.1" /usr/local/man/man1/z.1
 sudo mandb
 
+# Setup todo-txt
+mkdir "$HOME/.todo"
+ln -sf "$HOME/dotfiles/todo/config" "$HOME/.todo/config"
+
