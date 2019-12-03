@@ -45,7 +45,14 @@ fi
 alias grep='grep --color=auto'
 
 export TODOTXT_DEFAULT_ACTION=ls
-alias t='todo.sh'
+
+# Todo-txt aliases
+alias t='todo.sh -a'
+alias ta='t add'
+alias td='t do'
+alias tlp='t lsprj'
+alias tlc='t lsc'
+alias tf='echo "[x] (priority) [completition_date] [creation_date] Task [+project] [@context] [key:value]"'
 
 alias q='exit'
 alias dr="$HOME/code/codedraft/bin/draft.sh"
