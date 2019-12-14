@@ -157,3 +157,6 @@ sudo mandb
 mkdir "$HOME/.todo"
 ln -sf "$HOME/dotfiles/todo/config" "$HOME/.todo/config"
 
+# Tmux config
+ln -sf "$HOME/dotfiles/tmux.conf" "$HOME/.tmux.conf"
+
