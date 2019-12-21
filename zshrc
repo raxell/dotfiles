@@ -12,6 +12,24 @@ zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug load
 
 
+# Vi mode (enabled with spaceship-prompt function to make the mode indicator work)
+spaceship_vi_mode_enable
+# Make Vi mode transitions faster
+export KEYTIMEOUT=20
+# Map "jk" to ESC
+bindkey -M viins 'jk' vi-cmd-mode
+
+# Enable useful bindings in vi mode
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+
+
 HISTFILE="$HOME/.zsh_history"
 # How many history entries keep in memory
 HISTSIZE=2000
