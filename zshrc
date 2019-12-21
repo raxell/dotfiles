@@ -32,3 +32,10 @@ fi
 
 source "$ZPLUG_HOME/init.zsh"
 
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+
+zplug load
+
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_TIME_SHOW=true
+
