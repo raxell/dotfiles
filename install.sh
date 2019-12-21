@@ -161,3 +161,6 @@ ln -sf "$HOME/dotfiles/todo/config" "$HOME/.todo/config"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -sf "$HOME/dotfiles/tmux.conf" "$HOME/.tmux.conf"
 
+# Zsh setup
+ln -sf "$HOME/dotfiles/zshrc" "$HOME/.zshrc"
+
