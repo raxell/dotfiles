@@ -1,3 +1,17 @@
+# Zsh Plugin Manager
+export ZPLUG_HOME="$HOME/.zplug"
+
+if [ ! -d "$ZPLUG_HOME" ]; then
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+fi
+
+source "$ZPLUG_HOME/init.zsh"
+
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+
+zplug load
+
+
 HISTFILE="$HOME/.zsh_history"
 # How many history entries keep in memory
 HISTSIZE=2000
@@ -23,18 +37,6 @@ setopt APPEND_HISTORY
 # Don't store history commands
 setopt HIST_NO_STORE
 
-# Zsh Plugin Manager
-export ZPLUG_HOME="$HOME/.zplug"
-
-if [ ! -d "$ZPLUG_HOME" ]; then
-    git clone https://github.com/zplug/zplug $ZPLUG_HOME
-fi
-
-source "$ZPLUG_HOME/init.zsh"
-
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
-
-zplug load
 
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_TIME_SHOW=true
