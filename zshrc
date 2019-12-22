@@ -7,6 +7,9 @@ fi
 
 source "$ZPLUG_HOME/init.zsh"
 
+# Quick jump between directories
+zplug "rupa/z", use:z.sh
+# Zsh prompt
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 zplug load
