@@ -11,6 +11,8 @@ source "$ZPLUG_HOME/init.zsh"
 zplug "rupa/z", use:z.sh
 # Zsh prompt
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+# Yarn completion
+zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
 zplug load
 
