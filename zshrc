@@ -46,6 +46,8 @@ bindkey '^o' go_to_parent_dir
 alias t='todo.sh -a -n -v'
 alias q='exit'
 
+export TODOTXT_DEFAULT_ACTION=ls
+
 
 HISTFILE="$HOME/.zsh_history"
 # How many history entries keep in memory
