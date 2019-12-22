@@ -30,6 +30,11 @@ bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
 
+# Aliases
+alias t='todo.sh -a'
+alias q='exit'
+
+
 HISTFILE="$HOME/.zsh_history"
 # How many history entries keep in memory
 HISTSIZE=2000
