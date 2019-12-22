@@ -32,6 +32,15 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
+# Bind "^o" to "cd .."
+function go_to_parent_dir {
+    zle push-input
+    cd ..
+    zle send-break
+}
+zle -N go_to_parent_dir
+bindkey '^o' go_to_parent_dir
+
 
 # Aliases
 alias t='todo.sh -a'
