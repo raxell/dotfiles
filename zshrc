@@ -43,7 +43,7 @@ bindkey '^o' go_to_parent_dir
 
 
 # Aliases
-alias t='todo.sh -a'
+alias t='todo.sh -a -n -v'
 alias q='exit'
 
 
