@@ -48,6 +48,8 @@ bindkey '^o' go_to_parent_dir
 alias t='todo.sh -a -n -v'
 alias q='exit'
 
+alias ppdev="$HOME/dotfiles/tmux/pp-dev.sh"
+
 export TODOTXT_DEFAULT_ACTION=ls
 
 
