@@ -156,6 +156,7 @@ sudo mandb
 # Setup todo-txt
 mkdir "$HOME/.todo"
 ln -sf "$HOME/dotfiles/todo/config" "$HOME/.todo/config"
+ln -sf "$HOME/dotfiles/todo/actions" "$HOME/.todo/actions"
 
 # Tmux setup
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
