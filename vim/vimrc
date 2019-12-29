@@ -65,7 +65,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " SublimeText like colorscheme
-Plug 'danilo-augusto/vim-afterglow'
+Plug 'arcticicestudio/nord-vim'
 
 " Collection of language plugins
 Plug 'sheerun/vim-polyglot'
@@ -148,8 +148,8 @@ autocmd CompleteDone * silent! pclose
 let g:snipMate = {}
 let g:snipMate.snippet_version = 1
 
-" SublimeText color scheme
-colorscheme afterglow
+" Nord color scheme
+colorscheme nord
 
 " Open terminal window
 map <F12> <Esc>:exec 'term ++rows=' . string(&lines * 0.3)<CR><C-W>:set winfixheight<CR>
