@@ -82,6 +82,8 @@ setopt HIST_NO_STORE
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_TIME_SHOW=true
 
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
+
 # Access to `ppro` from any folder
 function ppro() {
     ( cd ~/code/dev-environment/ && ./ppro $* )

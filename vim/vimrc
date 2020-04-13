@@ -109,7 +109,22 @@ Plug 'w0rp/ale'
 " Comunication with a language server (allow go to definition, renaming, etc..)
 Plug 'natebosch/vim-lsc'
 
+" Fuzzy file/text finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
+
+
+" fzf settings
+" 'git log' options for :Commits command
+let g:fzf_commits_log_options = '--graph --oneline --color --decorate'
+" map ctrl-p to fuzzy file seatch
+nnoremap <C-p> :Files<CR>
+" map ctrl-g to find text in files
+nnoremap <C-g> :Rg<CR>
+" map ctrl-h to git log
+nnoremap <C-h> :Commits<CR>
 
 
 " Treat riot files as regular html files to get syntax highlighting and linting
