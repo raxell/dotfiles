@@ -77,6 +77,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Jump to anywhere
+Plug 'easymotion/vim-easymotion'
+
 " Git wrapper commands
 Plug 'tpope/vim-fugitive'
 
@@ -125,6 +128,18 @@ nnoremap <C-p> :Files<CR>
 nnoremap <C-g> :Rg<CR>
 " map ctrl-h to git log
 nnoremap <C-h> :Commits<CR>
+
+" Easymotion config
+" Disable default mappings
+let g:EasyMotion_do_mapping = 0
+" Set easymotion prefix
+map <leader> <Plug>(easymotion-prefix)
+" Jump to anywhere with 2 keystrokes
+nmap <leader>s <Plug>(easymotion-overwin-f)
+" Forward jump to work
+nmap <leader>j <Plug>(easymotion-w)
+" Backward jump to word
+nmap <leader>k <Plug>(easymotion-b)
 
 let g:airline_powerline_fonts = 1
 
