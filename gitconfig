@@ -16,3 +16,5 @@
 	s = status
 	co = checkout
 
+[credential]
+	helper = store

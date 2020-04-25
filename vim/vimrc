@@ -1,5 +1,5 @@
 " Set the leader key
-let mapleader = ","
+let mapleader = " "
 
 " Display line numbers
 set number
@@ -126,6 +126,7 @@ nnoremap <C-g> :Rg<CR>
 " map ctrl-h to git log
 nnoremap <C-h> :Commits<CR>
 
+let g:airline_powerline_fonts = 1
 
 " Treat riot files as regular html files to get syntax highlighting and linting
 autocmd BufRead,BufNewFile *.riot set filetype=html
