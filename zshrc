@@ -45,12 +45,8 @@ bindkey '^o' go_to_parent_dir
 
 
 # Aliases
-alias t='todo.sh -a -n -v'
 alias q='exit'
-
-alias ppdev="$HOME/dotfiles/tmux/pp-dev.sh"
-
-export TODOTXT_DEFAULT_ACTION=ls
+alias tmx='tmux'
 
 
 HISTFILE="$HOME/.zsh_history"
@@ -84,7 +80,3 @@ SPACESHIP_TIME_SHOW=true
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
-# Access to `ppro` from any folder
-function ppro() {
-    ( cd ~/code/dev-environment/ && ./ppro $* )
-}
