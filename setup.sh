@@ -1,8 +1,13 @@
-if [ $USER != $ME ] || [ $(echo $HOME | rev | cut -d'/' -f1 | rev) != $ME ]; then
-    echo "Cannot setup environment: I'm probably in someone's else environment"
+if [ -z "$ME" ]; then
+    echo "Missing environment variable ME"
+    exit 1
+fi
+
+if [ $USER != $ME ]; then
+    echo "Cannot setup environment: ME does not match the current user"
+    echo "ME=$ME"
     echo "USER=$USER"
-    echo "HOME=$HOME"
-    exit
+    exit 1
 fi
 
 # Setup Git
