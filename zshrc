@@ -53,7 +53,7 @@ HISTFILE="$HOME/.zsh_history"
 # How many history entries keep in memory
 HISTSIZE=2000
 # How many history entries keep in the history file
-SAVEHIST=10000
+SAVEHIST=999999999
 
 # Write the history file in the ':start:elapsed;command' format.
 setopt EXTENDED_HISTORY
