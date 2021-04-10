@@ -1,7 +1,3 @@
-# Load util files
-source "src/flag.sh"
-
-ME='marco'
 if [ $USER != $ME ] || [ $(echo $HOME | rev | cut -d'/' -f1 | rev) != $ME ]; then
     echo "Cannot setup environment: I'm probably in someone's else environment"
     echo "USER=$USER"
@@ -9,143 +5,11 @@ if [ $USER != $ME ] || [ $(echo $HOME | rev | cut -d'/' -f1 | rev) != $ME ]; the
     exit
 fi
 
-cd $HOME
-
-# Load terminal theme file
-FLAG_TERMINAL_THEME="terminal-theme"
-
-if [ $(flag_is_set $FLAG_TERMINAL_THEME) == false ]; then
-    dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < "$HOME/dotfiles/terminal-theme.dconf"
-    flag_set $FLAG_TERMINAL_THEME
-fi
-
-
-sudo apt update
-
-sudo apt install build-essential
-
-# Install java
-sudo apt install openjdk-8-jdk
-
-# Install curl
-sudo apt install curl
-
-# Install LaTex
-sudo apt install texlive latexmk texlive-lang-italian
-
-sudo apt install postgresql
-
-# Install Vim
-function upgrade_vim {
-    local VIM_SOURCES="/tmp/vim_sources"
-
-    if [ ! -d $VIM_SOURCES ]; then
-        git clone https://github.com/vim/vim.git $VIM_SOURCES
-        cd $VIM_SOURCES
-        ./configure \
-            --prefix=$HOME \
-            --with-features=huge \
-            --disable-gui
-        make
-        make install
-    fi
-}
-
-function install_vim {
-    # Remove Vim if already installed
-    sudo apt remove vim vim-runtime gvim
-
-    # Install Vim dependencies
-    sudo apt install libncurses5-dev libgnome2-dev libgnomeui-dev \
-        libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
-        libcairo2-dev libx11-dev libxpm-dev libxt-dev
-
-    # Install editorconfig-vim dependency
-    sudo apt-get install editorconfig
-
-    upgrade_vim
-
-    # Setup Vim
-    mkdir -p "$HOME/.vim"
-
-    ln -sf "$HOME/dotfiles/vim/vimrc" "$HOME/.vim/vimrc"
-
-    ln -sTf "$HOME/dotfiles/vim/snippets" "$HOME/.vim/snippets"
-}
-
 # Setup Git
 ln -sf "$HOME/dotfiles/gitconfig" "$HOME/.gitconfig"
 ln -sf "$HOME/dotfiles/gitignore" "$HOME/.gitignore"
 
-# Install redis
-function upgrade_redis {
-    local REDIS_DIR="$HOME/redis"
-
-	wget http://download.redis.io/redis-stable.tar.gz
-	tar xzf redis-stable.tar.gz
-	rm redis-stable.tar.gz
-	mv redis-stable $REDIS_DIR
-	cd $REDIS_DIR
-	make
-	mv $REDIS_DIR/src/redis-server "$HOME/bin"
-	mv $REDIS_DIR/src/redis-cli "$HOME/bin"
-    rm -rf $REDIS_DIR
-}
-
-function install_redis {
-    upgrade_redis
-}
-
-# Install Rust
-curl https://sh.rustup.rs -sSf | sh
-
-# Install dart
-if [ ! -d /usr/lib/dart ]; then
-	sudo apt install apt-transport-https
-	sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
-	sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
-	sudo apt update
-	sudo apt install dart
-fi
-
-# Add global dart packages
-pub global activate dart_language_server
-
-# Install nvm: Node Version Manager
-NVM_DIR="$HOME/.nvm"
-
-function upgrade_nvm {
-    cd $NVM_DIR
-    git fetch --tags origin
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-    source "$NVM_DIR/nvm.sh"
-}
-
-function install_nvm {
-   if [ -d $NVM_DIR ]; then
-        echo "nvm already installed in $NVM_DIR"
-        exit
-   fi
-
-   git clone https://github.com/creationix/nvm.git "$NVM_DIR"
-   upgrade_nvm
-}
-
-install_nvm
-
-# Install global modules
-npm install -g \
-    sass \
-    pug-cli \
-    typescript \
-    @riotjs/cli \
-    javascript-typescript-langserver \
-
-git clone https://github.com/raxell/sass-util.git "$HOME/code/util/sass"
-
-# Setup codedraft
-git clone https://github.com/raxell/codedraft.git "$HOME/code/codedraft"
-
+# Setup bash
 ln -sf "$HOME/dotfiles/bashrc" "$HOME/.bashrc"
 
 # Add man page for z script
