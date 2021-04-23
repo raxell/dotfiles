@@ -12,6 +12,17 @@ if [ $USER != $ME ]; then
     exit 1
 fi
 
+
+# Setup zsh
+# Source instead of symlink to allow to add machine specific settings
+echo 'Setup zsh...'
+
+cat >> ~/.zshrc <<EOF
+source "$DOTFILES_DIR/zshrc"
+
+EOF
+
+
 # Setup Git
 ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES_DIR/gitignore" "$HOME/.gitignore"
@@ -32,7 +43,4 @@ ln -sf "$DOTFILES_DIR/todo/actions" "$HOME/.todo/actions"
 # Tmux setup
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -sf "$DOTFILES_DIR/tmux.conf" "$HOME/.tmux.conf"
-
-# Zsh setup
-ln -sf "$DOTFILES_DIR/zshrc" "$HOME/.zshrc"
 
