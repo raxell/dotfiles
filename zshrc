@@ -1,4 +1,13 @@
+DOTFILES_DIR=$(dirname $0)
+
 # Zsh Plugin Manager
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export ZPLUG_HOME="$HOME/.zplug"
 
 if [ ! -d "$ZPLUG_HOME" ]; then
@@ -10,15 +19,15 @@ source "$ZPLUG_HOME/init.zsh"
 # Quick jump between directories
 zplug "rupa/z", use:z.sh
 # Zsh prompt
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+zplug romkatv/powerlevel10k, as:theme, depth:1
 # Yarn completion
 zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
 zplug load
 
 
-# Vi mode (enabled with spaceship-prompt function to make the mode indicator work)
-spaceship_vi_mode_enable
+# Vi mode
+bindkey -v
 # Make Vi mode transitions faster
 export KEYTIMEOUT=20
 # Map "jk" to ESC
@@ -75,8 +84,8 @@ setopt APPEND_HISTORY
 setopt HIST_NO_STORE
 
 
-SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_TIME_SHOW=true
-
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f "$DOTFILES_DIR/.p10k.zsh" ]] || source "$DOTFILES_DIR/.p10k.zsh"
