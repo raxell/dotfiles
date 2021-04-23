@@ -27,9 +27,6 @@ EOF
 ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES_DIR/gitignore" "$HOME/.gitignore"
 
-# Setup bash
-ln -sf "$DOTFILES_DIR/bashrc" "$HOME/.bashrc"
-
 # Add man page for z script
 sudo mkdir -p /usr/local/man/man1
 sudo ln -sf "$DOTFILES_DIR/z/z.1" /usr/local/man/man1/z.1
