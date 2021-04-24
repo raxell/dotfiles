@@ -1,4 +1,4 @@
-DOTFILES_DIR=$(dirname $0)
+export DOTFILES_DIR=$(dirname $0)
 
 # Zsh Plugin Manager
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
