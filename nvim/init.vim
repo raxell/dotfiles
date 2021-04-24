@@ -62,7 +62,7 @@ endif
 " PLUGINS
 " =============================================================================
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " SublimeText like colorscheme
 Plug 'arcticicestudio/nord-vim'
