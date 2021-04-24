@@ -53,11 +53,6 @@ zle -N go_to_parent_dir
 bindkey '^o' go_to_parent_dir
 
 
-# Aliases
-alias q='exit'
-alias tmx='tmux'
-
-
 HISTFILE="$HOME/.zsh_history"
 # How many history entries keep in memory
 HISTSIZE=2000
@@ -82,6 +77,15 @@ setopt HIST_VERIFY
 setopt APPEND_HISTORY
 # Don't store history commands
 setopt HIST_NO_STORE
+
+
+export EDITOR=nvim
+
+
+# Aliases
+alias vim='nvim'
+alias q='exit'
+alias tmx='tmux'
 
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
