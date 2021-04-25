@@ -88,6 +88,11 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+" Fuzzy finder
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " SublimeText like colorscheme
 Plug 'arcticicestudio/nord-vim'
 
@@ -136,21 +141,14 @@ Plug 'w0rp/ale'
 " Comunication with a language server (allow go to definition, renaming, etc..)
 Plug 'natebosch/vim-lsc'
 
-" Fuzzy file/text finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
 call plug#end()
 
-" fzf settings
-" 'git log' options for :Commits command
-let g:fzf_commits_log_options = '--graph --oneline --color --decorate'
-" map ctrl-p to fuzzy file seatch
-nnoremap <C-p> :Files<CR>
-" map ctrl-g to find text in files
-nnoremap <C-g> :Rg<CR>
-" map ctrl-h to git log
-nnoremap <C-h> :Commits<CR>
+" Fuzzy finder mappings
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fw <cmd>Telescope grep_string<cr>
+
 
 " Easymotion config
 " Disable default mappings
