@@ -16,6 +16,30 @@ set scrolloff=5
 " Highlight current line
 set cursorline
 
+" Keep block cursor in insert mode too
+set guicursor=
+
+" Don't keep the searched words highlighted after the search is done
+set nohlsearch
+
+" Allow to have unwritten changes to a file and open a new file, without being
+" forced to write the changes first
+set hidden
+
+" Use case insensitive search unless a capital letter is used, in that case
+" the search become case sensitive
+set smartcase
+set ignorecase
+
+" Don't create swap files
+set noswapfile
+
+" Highlight matches as I search
+set incsearch
+
+" Add an extra column at the beginning to show linting errors, etc...
+set signcolumn=yes
+
 " Visual autocomplete for command menu
 set wildmenu
 
