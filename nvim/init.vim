@@ -203,12 +203,6 @@ let g:snipMate.snippet_version = 1
 " Nord color scheme
 colorscheme nord
 
-" Open terminal window
-map <F12> <Esc>:exec 'term ++rows=' . string(&lines * 0.3)<CR><C-W>:set winfixheight<CR>
-
-" Send selection to fsharpi (assumes that fsharpi is running in a terminal
-" window located below the current one)
-autocmd FileType fsharp vmap <C-M> "+y<C-W>j<C-W>"+;;<CR>
 
 " Disable arrow keys
 noremap <Up> <Nop>
