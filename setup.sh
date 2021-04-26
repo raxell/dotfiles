@@ -22,6 +22,15 @@ fi
 # software, I can do it locally before sharing it across all the machines.
 
 
+# Alacritty
+echo 'Setup Alacritty...'
+cat > ~/.config/alacritty/alacritty.yml <<EOF
+import:
+  - $DOTFILES_DIR/alacritty/alacritty.yml
+
+EOF
+
+
 # Zsh
 # ---
 echo 'Setup zsh...'
