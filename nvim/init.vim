@@ -88,6 +88,8 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'vimwiki/vimwiki'
+
 " Fuzzy finder
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -142,6 +144,11 @@ Plug 'w0rp/ale'
 Plug 'natebosch/vim-lsc'
 
 call plug#end()
+
+
+" VimWiki remappings
+nmap <leader>wx <Plug>VimwikiToggleListItem
+
 
 " Fuzzy finder mappings
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
