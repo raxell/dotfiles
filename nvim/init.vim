@@ -90,6 +90,9 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vimwiki/vimwiki'
 
+" Start screen with recently opened files and sessions
+Plug 'mhinz/vim-startify'
+
 " Fuzzy finder
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
