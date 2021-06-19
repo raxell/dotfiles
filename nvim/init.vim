@@ -149,7 +149,9 @@ Plug 'natebosch/vim-lsc'
 call plug#end()
 
 
-" VimWiki remappings
+" VimWiki
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
+
 nmap <leader>wx <Plug>VimwikiToggleListItem
 
 
