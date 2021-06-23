@@ -1,5 +1,6 @@
 " Set the leader key
 let mapleader = " "
+let maplocalleader = "  "
 
 " Display line numbers
 set number
