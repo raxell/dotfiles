@@ -82,10 +82,12 @@ setopt HIST_NO_STORE
 export EDITOR=nvim
 
 
+# Always run vim inside tmux
+function vim() { tmux new "nvim $@" 2> /dev/null || nvim "$@"  }
+
 # Aliases
-alias vim='nvim'
-alias q='exit'
 alias tmx='tmux'
+alias q='exit'
 
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
