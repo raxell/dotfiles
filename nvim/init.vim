@@ -31,8 +31,9 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" SublimeText like colorscheme
-Plug 'arcticicestudio/nord-vim'
+
+" Gruvbox colorscheme
+Plug 'morhetz/gruvbox'
 
 " Collection of language plugins
 Plug 'sheerun/vim-polyglot'
@@ -145,8 +146,8 @@ autocmd CompleteDone * silent! pclose
 let g:snipMate = {}
 let g:snipMate.snippet_version = 1
 
-" Nord color scheme
-colorscheme nord
+" Gruvbox colorscheme
+colorscheme gruvbox
 
 
 " Disable arrow keys
