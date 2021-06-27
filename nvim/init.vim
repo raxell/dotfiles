@@ -83,6 +83,11 @@ Plug 'natebosch/vim-lsc'
 call plug#end()
 
 
+" Quick switch to terminal (assumes vim is running inside tmux)
+nnoremap <silent> <leader>tj :call system("tmux select-window -t terminal-j <Bar><Bar> tmux new-window -n terminal-j")<CR>
+nnoremap <silent> <leader>tk :call system("tmux select-window -t terminal-k <Bar><Bar> tmux new-window -n terminal-k")<CR>
+nnoremap <silent> <leader>tl :call system("tmux select-window -t terminal-l <Bar><Bar> tmux new-window -n terminal-l")<CR>
+
 " VimWiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 
