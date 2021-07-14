@@ -2,6 +2,10 @@
 let mapleader = " "
 let maplocalleader = "  "
 
+" Enalbe mouse support.
+" To break the rules, you must first master them. [cit.]
+set mouse=a
+
 " Display line numbers
 set number
 
