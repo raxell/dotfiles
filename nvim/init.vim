@@ -31,6 +31,9 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Intellisense
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 " Gruvbox colorscheme
 Plug 'morhetz/gruvbox'
@@ -77,9 +80,6 @@ Plug 'garbas/vim-snipmate'
 " Linting engine
 Plug 'w0rp/ale'
 
-" Comunication with a language server (allow go to definition, renaming, etc..)
-Plug 'natebosch/vim-lsc'
-
 call plug#end()
 
 
@@ -101,6 +101,21 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fw <cmd>Telescope grep_string<cr>
 
 
+" Trigger auto completion
+inoremap <silent><expr> <C-Space> coc#refresh()
+" Auto complete with the selected item
+inoremap <silent><expr> <TAB> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" Go to definition
+nmap <leader>gd <Plug>(coc-definition)
+" Rename symbol
+nmap <leader>gr <Plug>(coc-rename)
+" Hover symbol
+nnoremap <silent> <leader>gh :call CocActionAsync('doHover')<CR>
+" Highlight symbol when holding the cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+
 " Easymotion config
 " Disable default mappings
 let g:EasyMotion_do_mapping = 0
@@ -117,33 +132,6 @@ let g:airline_powerline_fonts = 1
 
 " Treat riot files as regular html files to get syntax highlighting and linting
 autocmd BufRead,BufNewFile *.riot set filetype=html
-
-" Enable default mappings for LSP commands
-let g:lsc_auto_map = v:true
-
-" Map a filetype to the command that starts the language server for that filetype
-let g:lsc_server_commands = {
-\ 'dart': 'dart_language_server',
-\ 'rust': 'rls',
-\ 'typescript': 'javascript-typescript-stdio',
-\}
-
-" Allow javascript linters on html files
-let g:ale_linter_aliases = {
-\   'html': ['javascript']
-\}
-
-" Enable eslint on html files
-let g:ale_linters = {
-\   'html': ['eslint'],
-\}
-
-let g:ale_fixers = {
-\ 'dart': ['dartfmt'],
-\ 'javascript': ['eslint'],
-\ 'html': ['eslint'],
-\}
-let g:ale_fix_on_save = 1
 
 " Automatically close the documentation window
 autocmd CompleteDone * silent! pclose
