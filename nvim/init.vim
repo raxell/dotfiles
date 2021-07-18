@@ -34,6 +34,9 @@ Plug 'nvim-telescope/telescope.nvim'
 " Intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" File explorer
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " Gruvbox colorscheme
 Plug 'morhetz/gruvbox'
@@ -114,6 +117,17 @@ nmap <leader>gr <Plug>(coc-rename)
 nnoremap <silent> <leader>gh :call CocActionAsync('doHover')<CR>
 " Highlight symbol when holding the cursor
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+
+" Remove the file explorer arrows (I already have icons next to files/folders)
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+" When deleting a file also delete the related buffer without asking confirmation
+let NERDTreeAutoDeleteBuffer=1
+" Reveal the file for the active buffer in the file explorer
+nnoremap <leader>ee :NERDTreeFind<CR>
+" Toggle the file explorer
+nnoremap <leader>et :NERDTreeToggle<CR>
 
 
 " Easymotion config
