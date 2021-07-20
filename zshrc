@@ -23,6 +23,10 @@ zplug romkatv/powerlevel10k, as:theme, depth:1
 # Yarn completion
 zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
+if ! zplug check; then
+    zplug install
+fi
+
 zplug load
 
 
