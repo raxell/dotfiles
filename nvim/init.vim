@@ -113,6 +113,8 @@ inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 nmap <leader>gd <Plug>(coc-definition)
 " Rename symbol
 nmap <leader>gr <Plug>(coc-rename)
+" Find all references to symbol
+nmap <leader>gs <Plug>(coc-references)
 " Hover symbol
 nnoremap <silent> <leader>gh :call CocActionAsync('doHover')<CR>
 " Highlight symbol when holding the cursor
