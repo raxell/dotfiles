@@ -172,6 +172,9 @@ let g:gitgutter_map_keys = 0 " vim-gitgutter mappings interfer with <leader>h
 nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l
 
+" Fast switch to previous file
+nnoremap <leader>p <C-^>
+
 " Move/swap lines or selections
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
