@@ -86,6 +86,11 @@ Plug 'w0rp/ale'
 call plug#end()
 
 
+" Add j and k to the jump list
+nnoremap <expr> k (v:count > 1 ? "m'" . v:count : '') . 'k'
+nnoremap <expr> j (v:count > 1 ? "m'" . v:count : '') . 'j'
+
+
 " Quick switch to terminal (assumes vim is running inside tmux)
 nnoremap <silent> <leader>tj :call system("tmux select-window -t terminal-j <Bar><Bar> tmux new-window -n terminal-j")<CR>
 nnoremap <silent> <leader>tk :call system("tmux select-window -t terminal-k <Bar><Bar> tmux new-window -n terminal-k")<CR>
