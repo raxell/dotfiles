@@ -2,6 +2,5 @@
 
 ## Setup
 
-1. Set `ME="your-name"`
-2. Run `./setup.sh`
+Run `ME="your_name" ./setup.sh`
 
