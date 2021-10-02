@@ -61,7 +61,7 @@ EOF
 echo 'Setup zsh...'
 
 cat >> ~/.zshrc <<EOF
-source "$DOTFILES_DIR/zshrc"
+source "$DOTFILES_DIR/zsh/zshrc"
 
 EOF
 
@@ -80,12 +80,12 @@ EOF
 echo 'Setup Git...'
 cat > ~/.gitconfig <<EOF
 [include]
-    path=$DOTFILES_DIR/gitconfig
+    path=$DOTFILES_DIR/git/gitconfig
 
 EOF
 
 cat > ~/.gitignore <<EOF
-$(cat $DOTFILES_DIR/gitignore)
+$(cat $DOTFILES_DIR/git/gitignore)
 
 EOF
 
@@ -93,11 +93,11 @@ EOF
 # Tmux
 # ----
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-ln -sf "$DOTFILES_DIR/tmux.conf" "$HOME/.tmux.conf"
+ln -sf "$DOTFILES_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
 
 
 # Add man page for z script
 sudo mkdir -p /usr/local/man/man1
-sudo ln -sf "$DOTFILES_DIR/z/z.1" /usr/local/man/man1/z.1
+sudo ln -sf "$DOTFILES_DIR/zsh/z/z.1" /usr/local/man/man1/z.1
 sudo mandb
 
