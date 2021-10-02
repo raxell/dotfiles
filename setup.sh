@@ -56,11 +56,6 @@ ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES_DIR/gitignore" "$HOME/.gitignore"
 
 
-# todo-txt
-# --------
-mkdir "$HOME/.todo"
-ln -sf "$DOTFILES_DIR/todo/config" "$HOME/.todo/config"
-ln -sf "$DOTFILES_DIR/todo/actions" "$HOME/.todo/actions"
 
 
 # Tmux
