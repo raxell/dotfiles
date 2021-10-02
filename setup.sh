@@ -77,10 +77,17 @@ EOF
 
 # Git
 # ---
-ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
-ln -sf "$DOTFILES_DIR/gitignore" "$HOME/.gitignore"
+echo 'Setup Git...'
+cat > ~/.gitconfig <<EOF
+[include]
+    path=$DOTFILES_DIR/gitconfig
 
+EOF
 
+cat > ~/.gitignore <<EOF
+$(cat $DOTFILES_DIR/gitignore)
+
+EOF
 
 
 # Tmux
