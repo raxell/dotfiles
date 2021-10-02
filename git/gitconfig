@@ -15,6 +15,7 @@
 	h = log --all --graph --oneline --decorate
 	s = status
 	co = checkout
+	pf = push --force-with-lease
 
 [credential]
 	helper = store
