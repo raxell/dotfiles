@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DOTFILES_DIR=$(cd `dirname $0` && pwd)
 
 if [ -z "$ME" ]; then
@@ -12,6 +14,28 @@ if [ $USER != $ME ]; then
     exit 1
 fi
 
+
+echo
+echo "THIS SCRIPT WILL OVERRIDE YOUR CONFIGURATION FILES."
+read -p "Do you really want to continue? (y/n): " CONTINUE
+if [[ ! $CONTINUE =~ ^[y]$ ]]; then
+    exit 1
+fi
+
+
+BACKUP_DIR=$HOME/backup_$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 6 | head -n 1)
+
+echo
+echo "Backup your files into $BACKUP_DIR ..."
+mkdir $BACKUP_DIR
+cp ~/.config/alacritty/alacritty.yml $BACKUP_DIR
+cp ~/.zshrc $BACKUP_DIR
+cp ~/.config/nvim/init.vim $BACKUP_DIR
+cp ~/.gitconfig $BACKUP_DIR
+cp ~/.gitignore $BACKUP_DIR
+cp ~/.tmux.conf $BACKUP_DIR
+
+
 # SETUP
 # =====
 #
@@ -23,6 +47,7 @@ fi
 
 
 # Alacritty
+# ---------
 echo 'Setup Alacritty...'
 cat > ~/.config/alacritty/alacritty.yml <<EOF
 import:
@@ -68,5 +93,4 @@ ln -sf "$DOTFILES_DIR/tmux.conf" "$HOME/.tmux.conf"
 sudo mkdir -p /usr/local/man/man1
 sudo ln -sf "$DOTFILES_DIR/z/z.1" /usr/local/man/man1/z.1
 sudo mandb
-
 
