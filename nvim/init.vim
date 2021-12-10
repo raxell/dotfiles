@@ -135,6 +135,9 @@ let NERDTreeAutoDeleteBuffer=1
 nnoremap <leader>ee :NERDTreeFind<CR>
 " Toggle the file explorer
 nnoremap <leader>et :NERDTreeToggle<CR>
+" Refresh the file explorer
+nnoremap <leader>er :NERDTreeRefreshRoot<CR>
+
 
 
 " Easymotion config
