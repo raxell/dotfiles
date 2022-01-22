@@ -131,6 +131,8 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 " When deleting a file also delete the related buffer without asking confirmation
 let NERDTreeAutoDeleteBuffer=1
+" Show hidden files by default
+let NERDTreeShowHidden=1
 " Reveal the file for the active buffer in the file explorer
 nnoremap <leader>ee :NERDTreeFind<CR>
 " Toggle the file explorer
