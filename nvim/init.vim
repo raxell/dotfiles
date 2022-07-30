@@ -96,6 +96,10 @@ nnoremap <silent> <leader>tj :call system("tmux select-window -t terminal-j <Bar
 nnoremap <silent> <leader>tk :call system("tmux select-window -t terminal-k <Bar><Bar> tmux new-window -n terminal-k")<CR>
 nnoremap <silent> <leader>tl :call system("tmux select-window -t terminal-l <Bar><Bar> tmux new-window -n terminal-l")<CR>
 
+" Quick switch to todo lists (assumes vim is running inside tmux)
+nnoremap <silent> <leader>1 :call system("TMUX= tmux new -d -s todo-list-1 'nvim ~/Dropbox/todos/work.todo' & unset TMUX <Bar> tmux switch-client -t todo-list-1")<CR>
+nnoremap <silent> <leader>2 :call system("TMUX= tmux new -d -s todo-list-2 'nvim ~/Dropbox/todos/personal.todo' & unset TMUX <Bar> tmux switch-client -t todo-list-2")<CR>
+
 " VimWiki
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 
