@@ -3,7 +3,7 @@
 	name = Marco Comes
 
 [core]
-	editor = vim
+	editor = nvim
 	excludesFile = ~/.gitignore
 
 [alias]
